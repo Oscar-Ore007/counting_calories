@@ -1,0 +1,74 @@
+body {
+    font-family: Serif;
+}
+
+.parent {
+    position: flex;
+    left: 400px;
+    height: 525px;
+    width: 360px;
+    margin: 100px auto;
+    background: #808080;
+    box-shadow: 00 3px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+h1 {
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.view { 
+    list-style-type: none;
+    position: flex;
+    top: 50x;
+    left: 100px;
+    height: 220px;
+    width: 240px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+
+
+}
+
+ul.list {
+    list-style-type: none;
+}
+
+#resources {
+    position: flex;
+    top: 100px;
+    right: 50px;
+}
+
+#totalResults {
+    position: flex;
+    top: 300px;
+    text-align: center;
+}
+
+#targetsForm {
+    position: flex;
+    top: 340px;
+}
+
+#results {
+    position: flex;
+    top: 420px;
+}
+
+ul.target-list {
+    position: flex;
+    list-style-type: none;
+}
