@@ -11,7 +11,7 @@ class Target {
         targetsView.innerHTML +=
             
             `
-            <ul class="target-list" data-set-id="${this.id}>
+            <ul class="target-list" data-set-id="${this.id}">
                 <li id="total-calories" data-set-targets="${this.total_calories}"> ${this.total_calories} calories </li>
                 <li></li>
                 <li></li>
@@ -19,7 +19,7 @@ class Target {
             </ul>
             `
         
-        document.getElementById("update").onclick = function () {
+        document.getElementById("update").onclick = function() {
             const lists = Array.from(document.getElementsByClassName("target-list"))
             if (lists.slice(-1)[0]) {
                 lists.slice(-2)[0].remove()

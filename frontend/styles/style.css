@@ -1,5 +1,8 @@
 body {
     font-family: Serif;
+    background-color: darkcyan;
+    border-style: groove;
+
 }
 
 .parent {
@@ -37,6 +40,8 @@ h1 {
     margin: 100px auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 20px;
+    border-style: ridge;
+    background-color: whitesmoke;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
 

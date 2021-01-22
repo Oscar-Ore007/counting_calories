@@ -52,22 +52,23 @@ const formSubmit = event => {
     let height = parseInt(document.getElementById("height").value)
     let bmi = Calorie.calculateCalories(age, gender, weight, height)
 
-    fetch(`${BASE_URL}calories`, {
+      fetch(`${BASE_URL}calories`, {
         method: "POST",
         headers: {
             'content-type': 'application/json'
         },
         body: JSON.stringify({
-            age: age,
+            age: age, 
             gender: gender,
             weight: weight,
             height: height,
             bmi: bmi,
+
         })
     })
 
         .then(response => response.json())
-   .then(calorie => { console.log(calorie)
+        .then(calorie => { console.log(calorie)
                 let u = new Calorie(calorie.id, calorie.age, calorie.gender, calorie.weight, calorie.height, calorie.bmi) 
                 console.log(u)
                 u.viewCalories()
