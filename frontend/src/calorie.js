@@ -21,6 +21,13 @@ class Calorie {
                 <li>Height: ${this.height}</li>
                 <li id="bmi" data-set-bmi="${this.bmi}">Calories: ${this.bmi}</li>
                 <input type="button" value="Delete" id="deleteButton">
+            </ul> 
+
+                <ul id="calories" class="list" data-set-id="${this.id}">
+                <li>Bonus Target:${Target.caloriesTarget("gain weight" , this.bmi)} </li>
+                
+                <li id="bmi" data-set-bmi="${this.bmi}">Calories: ${this.bmi}</li>
+                <input type="button" value="Delete" id="deleteButton">
 
 
     

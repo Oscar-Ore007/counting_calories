@@ -2,7 +2,7 @@ class Target {
     constructor(id, target_level, total_calories) {
         this.id = id
         this.target_level = target_level,
-            this.total_calories = total_calories
+        this.total_calories = total_calories
     }
 
     viewTargets() {
