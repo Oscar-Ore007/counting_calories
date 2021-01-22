@@ -20,7 +20,7 @@ const createForm = () => {
             <br>
             <label>Gender:</label><br>
             <input type="radio" name="genderS" id="gender" value="Male" required>Male</input>
-            <input type="radio" name="genderS" id="gender" value="Female" required>Male</input>
+            <input type="radio" name="genderS" id="gender" value="Female" required>Female</input>
             <br>
             <label>Weight:</label><br>
             <input type="number" id="weight" placeholder="in Lbs" min="90" max="400" required> 
