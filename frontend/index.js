@@ -38,7 +38,7 @@ const createForm = () => {
 
     document.getElementById("myForm").onsubmit = function () {
         document.getElementById("totalCalories").setAttribute("disabled", true);
-        document.getElementById("goalsForm").hidden = false;
+        document.getElementById("targetsForm").hidden = false;
     }
 }
 
@@ -150,7 +150,7 @@ const targetSubmit = (e) => {
 const updateTargets = () => {
     event.preventDefault();
 
-    const id = parseInt(document.getElementsByClassName("target-list")[0].getAttribute("data-set-targets"))
+    const id = parseInt(document.getElementsByClassName("target-list")[0].getAttribute("data-set-id"))
     const target = document.getElementById("target_level")
     const target_level = target.options[target.selectedIndex].value
     const total_calories = parseInt(document.getElementById("total-calories").getAttribute("data-set-targets"))

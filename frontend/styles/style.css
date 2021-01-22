@@ -16,6 +16,7 @@ body {
 }
 
 h1 {
+    background: blue;
     color: white;
     padding: 10px 50px;
     text-align: center;
