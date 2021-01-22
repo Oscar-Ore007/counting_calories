@@ -121,7 +121,80 @@ const targetSubmit = (e) => {
     let target_level = target.options[target.selectedIndex].value
     let total_calories = Target.caloriesTarget(target_level, bmi)
 
-    
+    fetch(`${BASE_URL}targets`, {
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            id,
+            target_level,
+            total_calories
+        })
+    })
 
+        .then(response => response.json())
+        .then(target => {
+            if (target.message) {
+                alert(target.message)
+            }
+            else {
+                let t = new Target(target.id, target.target_level, target.total_calories)
+                t.viewTargets()
+                console.log(t)
+            }
+        })
 }
 
+// Targets PATCH 
+const updateTargets = () => {
+    event.preventDefault();
+
+    const id = parseInt(document.getElementsByClassName("target-list")[0].getAttribute("data-set-targets"))
+    const target = document.getElementById("target_level")
+    const target_level = target.options[target.selectedIndex].value
+    const total_calories = parseInt(document.getElementById("total-calories").getAttribute("data-set-targets"))
+    const total = Target.updateCalories(target_level, total_calories)
+
+
+    fetch(`${BASE_URL}targets/${id}`, {
+        method: "PATCH",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            id, 
+            target_level,
+            total_calories: total 
+        })
+    })
+
+        .then(response => response.json())
+        .then(target => {
+            if (target.message) {
+                alert(target.message)
+            }
+            else {
+                let t = new Target(target.id, target.target_level, target.total_calories)
+                t.viewTargets()
+            }
+    })
+}
+
+
+// Calories DELETE 
+
+const deleteCalories = () => {
+    event.preventDefault();
+    let id = parseInt(document.getElementById("calories").getAttribute("data-set-id"))
+
+    fetch(`${BASE_URL}calories/${id}`, {
+        method: "DELETE",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            id
+        })
+    })
+}
